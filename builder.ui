@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object id="window" class="GtkWindow">
+    <property name="default-width">200</property>
+    <property name="default-height">320</property>
+
+    <child>
+      <object class='GtkBox'>
+        <property name='orientation'>vertical</property>
+        <property name="spacing">0</property>
+        <property name="halign">center</property>
+        <property name="valign">center</property>
+        <style>
+          <class name="box2"/>
+        </style>
+
+        <child>
+          <object class='GtkBox'>
+            <property name='orientation'>vertical</property>
+            <property name="spacing">0</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">horizontal</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <style>
+                  <class name="thumb-box"/>
+                </style>
+                <property name="height-request">180</property>
+
+                <child>
+                  <object class="GtkImage" id="player">
+                    <property name='icon-name'>emblem-music-symbolic</property>
+                    <property name='pixel-size'>60</property>
+                    <property name="halign">center</property>
+                    <property name="css-name">thumb</property>
+                    <property name="valign">center</property>
+                    <style>
+                      <class name="thumb"/>
+                    </style>
+                  </object>
+                </child>
+
+              </object>
+            </child>
+
+            <child>
+
+              <object class="GtkBox">
+                <property name="spacing">0</property>
+                <property name="orientation">vertical</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+
+                <child>
+                  <object class="GtkLabel" id="track-name">
+                    <property name="halign">center</property>
+                    <property name="label">Neon Audio Player</property>
+                    <property name="width-request">10</property>
+                    <property name="height-request">30</property>
+                    <property name="valign">center</property>
+                    <style><class name="track-name"/></style>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">6</property>
+                    <property name="orientation">horizontal</property>
+                    <property name="halign">center</property>
+                    <property name="valign">center</property>
+
+                    <child>
+                      <object class="GtkButton" id="shuffle">
+                        <property name='icon-name'>media-playlist-shuffle-symbolic</property>
+                        <property name="tooltip-text">Shuffle</property>
+                        <style><class name="buttons"/></style>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="GtkAdjustment" id="my_adjustment">
+                        <property name="lower">0</property>
+                        <property name="upper">100</property>
+                        <property name="value">0</property>
+                        <property name="step-increment">1</property>
+                        <property name="page-increment">10</property>
+                      </object>
+
+                      <object class="GtkScale" id="scale">
+                        <property name="orientation">GTK_ORIENTATION_HORIZONTAL</property>
+                        <property name="adjustment">my_adjustment</property>
+                        <property name="draw-value">False</property>
+                        <property name="width-request">140</property>
+                        <style>
+                          <class name="scale"/>
+                        </style>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="GtkButton" id="loop">
+                        <property name='icon-name'>media-playlist-repeat-song-symbolic</property>
+                        <property name="tooltip-text">Loop</property>
+                        <style><class name="buttons"/></style>         
+                      </object>
+                    </child>
+
+                  </object>
+                </child>
+
+              </object>
+            </child>
+
+            <!-- PREVIOUS / PLAYPAUSE / NEXT -->
+            <child>
+              <object class="GtkBox">        
+                <property name="spacing">34</property> 
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+
+                <child>
+                  <object class="GtkButton" id="previous">
+                    <property name='icon-name'>media-skip-backward-symbolic</property>
+                    <property name="tooltip-text">Previous</property>
+                    <style><class name="buttons"/></style>
+                   
+                   
+                  </object>
+                </child>
+
+                <child>
+                  <object class="GtkButton" id="pp">
+                    <property name='icon-name'>media-playback-start-symbolic</property>
+                    <property name="tooltip-text">Play/Pause</property>
+                    <style><class name="buttons"/></style>
+                   
+                  </object>
+                </child>
+
+                <child>
+                  <object class="GtkButton" id="next">
+                    <property name='icon-name'>media-skip-forward-symbolic</property>
+                    <property name="tooltip-text">Next</property>
+                    <style><class name="buttons"/></style>
+                 
+                  </object>
+                </child>
+
+              </object>
+            </child>
+
+          </object>
+        </child>
+
+      </object>
+    </child>
+  </object>
+</interface>
