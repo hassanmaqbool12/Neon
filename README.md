@@ -3,4 +3,8 @@ Neon is a lightweight, native GTK4 audio player designed for simple, distraction
 
 It focuses on plug-and-play listening rather than library management or playlists. 
 
+![Preview Screenshot](Preview-pink.png)
+
+![Preview Screenshot](Preview-grey.png)
+
 Neon is built for users who just want to open an audio file and listen—without scanning libraries, managing collections, or dealing with unnecessary UI complexity.
